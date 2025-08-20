@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom js</title>
+  </head>
+  <body>
+    <main>
+      <h1>ami habib er premik</h1>
+      <h2 id="h2-tag">Id tag</h2>
+      <h3 class="h3-tag">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+      <!--  -->
+      <p class="span-tag">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est iste voluptatum corporis ea a! Nemo, blanditiis vero eligendi <span>perferendis praesentium</span> consequuntur id quos illum veniam magnam <span>aperiam</span> debitis, ab consectetur.</p>
+      <!--  -->
+      <ul class="id-nm">
+        <li>habib tmi amar</li>
+        <li>ami oyshi habib er</li>
+        <li>Kodda</li>
+        <li>Soydabad</li>
+      </ul>
+    </main>
+    <!-- js DOM -->
+    <script>
+      const liLIst = document.getElementsByTagName("li");
+    //   console.log(liLIst);
+      for (const li of liLIst) {
+        // console.log(li.innerText);
+      }
+      //   Id tag Get by ID
+      const idTag = document.getElementById("h2-tag");
+    //   console.log(idTag.innerText);
+      idTag.innerText = "Change Tex";
+
+      // get element by class
+      const getClass = document.getElementsByClassName("id-nm");
+    //   console.log(getClass);
+      for (const classElement of getClass) {
+        // console.log(classElement.innerText);
+      }
+    //   find span Tag
+    const h3Tag = document.getElementById('h3-tag');
+    h3tag.style.backgroundColor = 'green';
+    
+    </script>
+  </body>
+</html>
