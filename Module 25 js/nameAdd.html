@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Add</title>
+  </head>
+  <body>
+    <p id="name">No name</p>
+    <input id="input-name" type="text" placeholder="Your Name" name="" id="" />
+    <button id="btn-submit" type="submit">Submit</button>
+    <br />
+    <!-- mail input -->
+    <p id="mail">No Mail</p>
+    <input id="input-mail" type="email" placeholder="Your mail" name="" id="" />
+    <button id="btn-mail-submit" type="submit">Submit</button>
+    <script>
+      document
+        .getElementById("btn-mail-submit")
+        .addEventListener("click", function () {
+          // input
+          const inputMail = document.getElementById("input-mail");
+          const yourMail = inputMail.value;
+          inputMail.value = "";
+          //  show input
+          const mailField = document.getElementById("mail");
+          mailField.innerText = yourMail;
+        });
+    </script>
+
+    <script src="js/nameAdd.js"></script>
+  </body>
+</html>
