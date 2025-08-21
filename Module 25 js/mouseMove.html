@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Move js</title>
+  </head>
+  <body>
+    <button id="btn-mouse">Micky Mouse minnie</button> <br />
+    <input type="email" name="" id="user-mail" placeholder="Your mail" />
+    <input type="name" name="" id="user-name" placeholder="Your name" />
+    <input type="password" name="" id="user-pass" placeholder="Your pass" /> <br>
+    <!-- Delete text -->
+     <h1 id="info">My secret info</h1>
+     <input id="input-delete" type="text" placeholder="write-delete">
+    <button id="btn-delete" disabled>Delete</button>
+
+    <script>
+      document.getElementById('input-delete')
+      .addEventListener('keyup', function(event){
+        const text = event.target.value;
+        const btnDelete = document.getElementById('btn-delete');
+        const infoTag = document.getElementById('info');
+        if(text === 'delete'){
+            console.log('Delete type');
+            btnDelete.removeAttribute('disabled');
+            infoTag.style.display = 'none';
+        }else{
+            console.log('something else');
+            btnDelete.setAttribute('disabled',true);
+            infoTag.style.display = '';
+        }
+      })
+    </script>
+    <script src="js/mouse&moreEvents.js"></script>
+  </body>
+</html>
