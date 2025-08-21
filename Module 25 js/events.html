@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--  -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Handler js</title>
@@ -12,8 +21,21 @@
     <!--  -->
     <p id="user-info">No user</p>
     <button id="btn-login">Login</button>
+    <!-- Menu bar -->
+    <ul id="menu-bar">
+      <li>Home</li>
+      <li>Contract</li>
+      <li>Login</li>
+    </ul>
+    <p id="icon"><i class="fa-solid fa-bars"></i></p>
 
-    <script></script>
+    <script>
+      document.getElementById('icon')
+      .addEventListener('click', function(){
+        const setMenu = document.getElementById('menu-bar');
+        setMenu.innerText = '';
+      })
+    </script>
 
     <script src="js/handler.js"></script>
   </body>

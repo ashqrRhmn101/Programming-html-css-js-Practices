@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment set</title>
+  </head>
+  <style>
+    body {
+      border: 2px solid black;
+      padding: 20px;
+    }
+    #comment-container {
+      border: 2px solid green;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+    .comment {
+      border: 2px solid gainsboro;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <h1>My Awesome comment Box</h1>
+    <section>
+      <h3>All comment here</h3>
+      <div id="comment-container">
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem, aspernatur!
+        </p>
+        <p class="comment">
+          Officia quo consequuntur molestias esse nihil officiis at voluptatum
+          neque?
+        </p>
+        <p class="comment">
+          Quibusdam doloribus reiciendis, nulla eum inventore et numquam quas
+          corrupti.
+        </p>
+      </div>
+    </section>
+    <!-- from -->
+    <textarea name="" id="comment-text-box" cols="30" rows="5"></textarea>
+    <br />
+    <button id="btn-comment">Post comment</button>
+    <!-- js -->
+    <script>
+      document
+        .getElementById("btn-comment")
+        .addEventListener("click", function () {
+          const commentText = document.getElementById("comment-text-box");
+          const newComment = commentText.value;
+          //   clean the text area
+          commentText.value = '';
+
+          //  step 3 parent node publish comment
+          const commentContainer = document.getElementById("comment-container");
+          console.log(commentContainer);
+
+          // step 4 create comment p and set innerText
+          const commentElement = document.createElement("p");
+          commentElement.classList.add("comment");
+          commentElement.innerText = newComment;
+
+          // step 5 append new p tag
+          commentContainer.appendChild(commentElement);
+        });
+    </script>
+  </body>
+</html>
