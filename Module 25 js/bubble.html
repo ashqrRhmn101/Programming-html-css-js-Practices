@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event bubble</title>
+    <style>
+      #item-list,
+      li {
+        border: 2px solid gray;
+        padding: 10px;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Explore event bubble</h1>
+    <section id="list-container">
+      <h3>List of things</h3>
+      <!-- ul>li#item-$*6>Lorem2 -->
+      <ul id="item-list">
+        <li id="item1">1 Lorem, ipsum.</li>
+        <li id="item2">2 Distinctio, veniam.</li>
+        <li id="item3">3 Iusto, consequatur?</li>
+        <li id="item4">4 Enim, delectus?</li>
+        <li id="item5">5 Laborum, error!</li>
+      </ul>
+    </section>
+    <!-- js Start -->
+    <script>
+      // item 4 click
+      document
+        .getElementById("item4")
+        .addEventListener("click", function (event) {
+          console.log("item 4 clicked");
+          event.stopPropagation();
+        });
+
+      // ul click
+      document
+        .getElementById("item-list")
+        .addEventListener("click", function () {
+          console.log("ul clicked");
+        });
+
+      // item2 click
+      document
+        .getElementById("item2")
+        .addEventListener("click", function (event) {
+          console.log("item 2 clicked");
+          event.stopPropagation();
+        });
+
+      // item3 click
+      document
+        .getElementById("item3")
+        .addEventListener("click", function (event) {
+          console.log("item 3 clicked");
+        //   event.stopPropagation();
+        event.stopImmediatePropagation();
+        });
+         // item5.1 click
+      document
+        .getElementById("item5")
+        .addEventListener("click", function (event) {
+          console.log("item 5 clicked");
+        //   event.stopPropagation();
+        // event.stopImmediatePropagation();
+        });
+         // item5.2 click
+      document
+        .getElementById("item5")
+        .addEventListener("click", function (event) {
+          console.log("item 5 clicked");
+        //   event.stopPropagation();
+        event.stopImmediatePropagation();
+        });
+         // item5.3 click
+      document
+        .getElementById("item5")
+        .addEventListener("click", function (event) {
+          console.log("item 5 clicked");
+        //   event.stopPropagation();
+        // event.stopImmediatePropagation();
+        });
+    </script>
+  </body>
+</html>
