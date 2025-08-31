@@ -1,0 +1,22 @@
+const student = [
+    {id:1, name: 'abul', marks: 60},
+    {id:2, name: 'kbul', marks: 70},
+    {id:3, name: 'sbul', marks: 80},
+    {id:4, name: 'mbul', marks: 90},
+    {id:5, name: 'ubul', marks: 95},
+    {id:5, name: 'ubul', marks: 98},
+];
+
+// const mark = student.map(mark => mark.marks*0.75);
+const studentName = student.map(stNames => stNames.name);
+// console.log(studentName);
+const addMark = student.map(stMark => stMark.marks+5);
+const goodStudent = student.filter(stMark => stMark.marks >= 80);
+const topStudent = student.find(stMark => stMark.marks >= 95 );
+
+console.log(addMark);
+console.log(goodStudent);
+console.log(topStudent);
+
+
+// console.log(`${studentName} marks:`);
