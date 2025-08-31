@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Like comment share</title>
+
+    <style>
+      .section-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 560px;
+        height: 200px;
+        padding: 5px;
+        border: 2px solid;
+      }
+      #btn-like,
+      #btn-comment {
+        /* margin: 10px; */
+        padding: 8px 20px;
+        background-color: rgb(176, 219, 252);
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section-btn">
+      <span id="span-tagBack">0</span> 
+      <span id="span-tag">0</span> 
+      <button id="btn-like">Like</button><br>
+
+      <p id="comment"></p>
+      <textarea name="" id="text-box" placeholder="Comment" rows="4"></textarea><br>
+      <button id="btn-comment">comment</button>
+    </section>
+    
+    <script>
+      
+    </script>
+
+    <script src="js/likeCount.js"></script>
+    <script src="js/comment.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="id">a0</div>
+    <div class="id">a1</div>
+    <div class="id">a2</div>
+    <div class="id">a3</div>
+
+    <script>
+        const IDS = document.getElementsByClassName('id');
+        for(const ids of IDS){
+            ids.addEventListener("click", function(){
+                const id = ids.parentNode.children[1].innerText;
+            
+                console.log(id);
+            })
+            
+            
+        }
+    </script>
+</body>
+</html>
