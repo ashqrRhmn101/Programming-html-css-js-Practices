@@ -3,6 +3,7 @@ class Vehicle{
         this.type = type;
         this.brand = brand;
         this.price = price;
+        this.#tin = "1242@WDJ";
     }
 
     getThis(){
